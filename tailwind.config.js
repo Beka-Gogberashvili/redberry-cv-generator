@@ -8,6 +8,9 @@ module.exports = {
       },
       fontFamily: {
         helvetica: ["Helvetica Neue Bold Caps", "sans-serif"],
+        helveticaT: ["Helvetica Neue Thin", "sans-serif"],
+        helveticaL: ["Helvetica Neue Light", "sans-serif"],
+        helveticaR: ["Helvetica Neue", "sans-serif"],
       },
     },
   },

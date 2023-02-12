@@ -1,7 +1,9 @@
 <template>
   <div class="min-h-[100vh] bg-shutterstock">
     <nav class="mx-[70px] pt-[25px]">
-      <img src="@/assets/img/redberry-logo.png" alt="logo" class="" />
+      <RouterLink to="/">
+        <img src="@/assets/img/redberry-logo.png" alt="logo" class="" />
+      </RouterLink>
       <div class="h-px bg-[#191919] w-full mt-6 mb-10" />
     </nav>
 

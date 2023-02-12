@@ -7,3 +7,74 @@
   src: url("/src/assets/fonts/HelveticaNeueLTGEOCaps-55Roman.ttf")
     format("woff2");
 }
+@font-face {
+  font-family: "Helvetica Neue Thin";
+  src: url("/src/assets/fonts/Helvetica Neue LT GEO 35 Thin.ttf")
+    format("woff2");
+}
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: url("/src/assets/fonts/HelveticaNeueLTGEOCaps-45Light.ttf")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/src/assets/fonts/HelveticaNeue.ttc") format("woff2");
+}
+
+input,
+textarea {
+  border-radius: 4px;
+  padding: 13px 16px;
+  border: 1px solid #bcbcbc;
+  outline: none;
+  font-weight: 400;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #bcbcbc;
+}
+
+textarea {
+  resize: none;
+}
+
+.navigation-btn {
+  color: white;
+  padding: 10px 35px;
+  padding-top: 14px;
+  background-color: #6b40e3;
+  border-radius: 4px;
+  font-family: "Helvetica Neue Bold Caps";
+}
+
+.navigation-btn:hover {
+  background-color: #7949ff;
+}
+
+.navigation-btn:active {
+  background-color: #512faf;
+}
+
+.success-input {
+  border: 1px solid #98e37e;
+  background-image: url("src/assets/svg/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: 97%;
+}
+.success-input:focus {
+  outline: 1px solid #98e37e;
+}
+
+.error-input {
+  border: 1px solid #ef5050;
+  background-image: url("src/assets/svg/warrning.svg");
+  background-repeat: no-repeat;
+  background-position: 97%;
+}
+
+.error-input:focus {
+  outline: 1px solid #ef5050;
+}
