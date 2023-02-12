@@ -7,5 +7,7 @@ export const useDataStore = defineStore("data", () => {
   const about = ref(localStorage.getItem("about"));
   const email = ref(localStorage.getItem("email"));
   const phone = ref(localStorage.getItem("phone"));
-  return { name, surname, about, email, phone };
+  const image = ref(localStorage.getItem("image"));
+
+  return { name, surname, about, email, phone, image };
 });

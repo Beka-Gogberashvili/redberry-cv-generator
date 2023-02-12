@@ -58,7 +58,7 @@
               id="thumbnail"
               type="file"
               class="hidden"
-              rules="image|required"
+              rules="image"
               accept="image/png, image/gif, image/jpeg"
               @change="onChooseImage"
             >
@@ -106,6 +106,7 @@
               name="email"
               type="email"
               rules="required|email|redberry_email"
+              maxlength="40"
             />
             <h5 class="text-sm font-light mt-2">
               უნდა მთავრდებოდეს @redberry.ge-ით
@@ -158,26 +159,35 @@ export default {
   setup() {
     const router = useRouter();
     const data = useDataStore();
-    const image = ref(null);
+    const image = ref(data.image);
     const noImage = ref(false);
     const about = ref("");
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      localStorage.setItem("image", reader.result);
+      data.image = reader.result;
+    };
 
     const wipeData = () => {
       localStorage.clear();
-      router.push("/");
+      window.location.href = "/";
     };
 
     const onChooseImage = (event) => {
-      image.value = event.target.files[0];
+      reader.readAsDataURL(event.target.files[0]);
+      image.value = true;
       noImage.value = false;
     };
 
     const onSubmit = (values) => {
-      console.log(values);
+      if (data.image) {
+        console.log(values);
+      }
     };
 
     const onClickNext = () => {
-      if (!image.value) {
+      if (!data.image) {
         noImage.value = true;
       }
     };

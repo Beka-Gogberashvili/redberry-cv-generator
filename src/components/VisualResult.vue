@@ -32,13 +32,14 @@
         </div>
       </div>
       <img
-        src="https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w="
+        v-if="data.image"
+        :src="data.image"
         alt="avatar"
-        class="rounded-full w-[246px] h-[246px]"
+        class="rounded-full w-[246px] h-[246px] object-cover"
       />
     </div>
 
-    <div class="mt-[19px] h-px bg-[#C8C8C8] w-full" />
+    <div v-if="data.about" class="mt-[19px] h-px bg-[#C8C8C8] w-full" />
   </div>
 </template>
 
@@ -58,6 +59,7 @@ export default {
   setup() {
     const dataStore = useDataStore();
     const data = ref(dataStore);
+
     return {
       LiveInput,
       data,
